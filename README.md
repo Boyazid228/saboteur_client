@@ -1,3 +1,8 @@
+![JavaScript](https://img.shields.io/badge/JavaScript-ES6-yellow)
+![HTML5](https://img.shields.io/badge/HTML5-E34F26)
+![CSS3](https://img.shields.io/badge/CSS3-1572B6)
+![WebSocket](https://img.shields.io/badge/WebSocket-Client-orange)
+
 # Saboteur Frontend
 
 Frontend implementation of the **Saboteur** multiplayer board game.
