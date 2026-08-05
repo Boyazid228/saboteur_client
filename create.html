@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+   <head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>Saboteur</title>
+      <link rel="preconnect" href="https://fonts.googleapis.com">
+      <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+      <link rel="preconnect" href="https://fonts.googleapis.com">
+      <link rel="preconnect" href="https://fonts.googleapis.com">
+      <link href="./css/sweetalert2.min.css" rel="stylesheet" type="text/css">
+      <link href="./css/toastr.css" rel="stylesheet" type="text/css">
+      <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+      <link href="https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&family=UnifrakturCook:wght@700&display=swap" rel="stylesheet">
+      <link rel="stylesheet" href="./css/main.css">
+   </head>
+   <body>
+      <img class="create_logo" onclick="location.replace('./index.html');" src="./img/game/saboteur_text.png" alt="">
+      <div class="main-bg">
+         <div class="player_card"  style="display: none;">
+                  <div class="player_type  text"></div>
+
+                     <div class="hand-card"><img src="" alt=""></div>
+
+            </div>
+         <div class="status_box"  style="display: none;">
+            <div id="status" class="text">Status: Not connected</div>
+            <h5  class="text fz16">ID: <span id="id"></span></h5>
+
+           
+
+           <div class="my_avatar" id="my_avatar" style="display:none;">
+               <div class="mytools" data-id="lantern"><img src="./img/game/lantern.png" alt=""></div>
+               <div class="mytools" data-id="cart"><img src="./img/game/cart.png" alt=""></div>
+               <div class="mytools" data-id="pickaxe"><img src="./img/game/pickaxe.png" alt=""></div>
+           </div>
+
+            <div id="turn-timer-box" class="" style="display:none;">
+             ⏱ <span id="turn-timer">00:17</span>
+           </div>
+            
+         </div>
+         <div class="content lobby_main" >
+            <div class="lobby">
+               <div class="lobby_form" >
+                  <div class="input_box">
+                     <label for="">Lobby name</label>	
+                     <div class="input">
+                        <input type="text" id="lobbyId" value="Lobby123">
+                     </div>
+                     <div class="custom-select">
+                        <div class="select-selected">Player count</div>
+                        <div class="select-items select-hide">
+                           <div>3</div>
+                           <div>5</div>
+                           <div>6</div>
+                        </div>
+                     </div>
+                     <div class="create btn" onclick="connect()">Create</div>
+                  </div>
+               </div>
+               <div class="waiting_form" style="display: none;">
+                  
+               </div>
+            </div>
+            <button class="create btn" id="start" style="display:none;" onclick="start()">Ready</button>
+         </div>
+         <div class="board " style="display: none;">
+            <div class="left_box">
+
+               <div class="cards_box">
+                  
+                  <div id="cards" class="cards">
+                    
+                  </div>
+
+                   <div class="trash" id="trash">
+                     <div class=""><img src="./img/game/trash.png" alt=""></div>
+                  </div>
+               </div>
+
+               <div class="canvas" >
+                   <canvas id="boardCanvas"  width="600" height="600"></canvas>
+               </div>
+              
+               
+            </div>
+            
+         </div>
+         <div class="right_box"  style="display: none;">
+               <div class="alerts">
+                  <h1 class="text">System</h1>
+                  <ul style="display: none;" id="system"></ul>
+               </div>
+               <div class="players" id="players"  style="display: none;">
+
+
+               </div>
+               <div class="chat">
+                  <h1 class="text">Chat</h1>
+
+                  <div class="chat_conent">
+                     <ul class="" id="chat">
+
+                       
+                     </ul>
+
+                  </div>
+                  
+                  <div class="chat_form">
+                     <input type="text" id="messageInput" placeholder="Your message">
+                     <button class="btn chat_btn" onclick="sendMessage()">Send</button>
+                  </div>
+               </div>
+            </div>
+      </div>
+      <script src="./js/jquery.min.js"></script>	
+      <script src="./js/sweetalert2.min.js"></script>
+      <script src="./js/toastr.min.js"></script>
+      <script src="./js/socket.js"></script>
+      <script></script>
+   </body>
+</html>
